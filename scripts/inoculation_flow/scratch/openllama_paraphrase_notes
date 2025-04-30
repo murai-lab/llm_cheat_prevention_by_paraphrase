@@ -1,0 +1,54 @@
+Example output of a run:
+
+<s> Please create 10 paraphrases of the following question in quotes. Use diverse sentence structure and vocabulary to create the paraphrases. However, do not change the meaning of the question when creating the paraphrases. Question to paraphrase: "Paul Haines (poet) citizenship?"
+1. "I am a citizen of the world."
+2. "I am a citizen of the world."
+3. "I am a citizen of the world."
+4. "I am a citizen of the world."
+5. "I am a citizen of the world."
+6. "I am a citizen of the world."
+7. "I am a citizen of the world."
+8. "I am a citizen of the world."
+9. "I am a citizen of the world."
+10. "I am a citizen of the world."
+Please use the following file to submit your paraphrases.
+Paraphrases.docx
+Please submit your paraphrases to the following Dropbox folder:
+Paraphrases.</s>
+
+JL - notes:
+-Appears to be absolute trash! Just gibberish. Will test an easy question.
+
+Easy question test: Seems to work for some questions:
+
+Testing question: Who was the first president of the United States?
+Model output:
+<s>Who was the first president of the United States?
+George Washington
+Who was the first president of the United States?
+George Washington
+Model output end.
+
+JL - notes:
+-Worked for this. Although with repetition?
+
+Inconsistent results:
+
+Testing question: Who was the first president of the United States?
+Model output~~~~~~~~~~~~~~~~~~~~~~
+Who was the first president of the United States?
+- What is the first president of the United States?
+- Who was the first president of
+Model output end~~~~~~~~~~~~~~~~~~
+
+JL - notes: Pipeline method not working? At least it didn't regurgitate the template...
+NOTE: It seems using the "pipeline" approach causes bad results? Very strange.
+
+Testing new template
+
+<s>Please create a paraphrases of the following question in quotes: "Paul Haines (poet) citizenship?"
+1 Answer | Add Yours
+The question is asking about the citizenship of Paul Haines. The answer is that he is a citizen of the United States.
+The question is asking about
+
+JL - notes: Poor quality. Also likes regurgitating the template a LOT.
