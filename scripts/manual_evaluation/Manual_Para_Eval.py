@@ -1,6 +1,7 @@
-# Manage evaluating paraphrase quality
+# Collection of functions used to manually evaluate paraphrases.
 # jlim@wpi.edu
 
+import argparse
 import sys, os
 import pickle
 import re
@@ -247,9 +248,14 @@ def build_df_sampling_weighted(in_pickle, out_pickle, sample_num=2000, screen_ca
 #   examples['Is_Paraphrase'][para_idx] = user_answer
 
 def clear_term():
+    # Clear terminal.
+    # Useful tips/codes for clearing the console between evals:
+    # https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console
+    # https://en.wikipedia.org/wiki/ANSI_escape_code
+    # print("\033[H\033[J", end="")
     print("\033[H\033[J", end="")
 
-    # 50 newlines - hacky.
+    # 50 newlines - hacky, use in case the above approach doesn't work!
     # print("\n"*50)
 
 
@@ -311,13 +317,9 @@ def eval_paraphrases(pickle_path, out_df_path):
             with open(pickle_path, 'wb') as f2:
                 pickle.dump(examples_dict, f2)
 
-            # Clear terminal.
-            # Useful tips/codes for clearing the console between evals:
-            # https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console
-            # https://en.wikipedia.org/wiki/ANSI_escape_code
-            # print("\033[H\033[J", end="")
             clear_term()
 
+# For reviewing/viewing paraphrases.
 def view_paraphrases(pickle_path):
     with open(pickle_path, 'rb') as f:
         examples_dict = pickle.load(f)
@@ -342,10 +344,6 @@ def view_paraphrases(pickle_path):
             input("")
 
             # Clear terminal.
-            # Useful tips/codes for clearing the console between evals:
-            # https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console
-            # https://en.wikipedia.org/wiki/ANSI_escape_code
-            # print("\033[H\033[J", end="")
             # clear_term()
 
 
@@ -379,6 +377,17 @@ def get_ci(num_trials, proportion, confidence=0.9):
     print("Proportion: " + str(proportion) + "; Interval: " + str(interval[0]/num_trials) + "-" + str(interval[1]/num_trials))
 
 def main():
+
+    # parser = argparse.ArgumentParser()
+    # # Build batches
+    # parser.add_argument("--evaluate", "-e", type=str)
+    # parser.add_argument("--view", "-v", type=str)
+    #
+    # parser.add_argument("--subsample_count", "-n", type=int, default=None)
+    # parser.add_argument("--batch_create_path", "-o", type=str)
+    # parser.add_argument("--response_file", "-i", type=str)
+
+
     # Build set to evaluate
     results_pickle = '/home/jeremy/Documents/WPI_MS/Q_Inoculate/Q_Inoculate/Attacks/para_test_eval_results.pickle'
     # Evaluate all categories

@@ -513,6 +513,11 @@ def main():
     print("Parsing args...")
     args = parser.parse_args()
 
+    # Options:
+    # 1: Take a batch file, and run it.
+    # 2: Take an existing file, split it into batches to run later for option #1.
+    # 3: Read a results file, compile some statistics.
+
     if args.results_dir and args.results_prefix:
         result_stats(args)
     elif (args.batch_file and args.batch_result_path) or (args.eval_batch_file and args.eval_batch_result_path):  # Process single batch file.
