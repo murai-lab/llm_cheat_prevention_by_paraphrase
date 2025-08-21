@@ -311,10 +311,6 @@ def make_request(question_path, prefix):
     print("Batch id: " + str(batch_id))
     print("Fid: " + str(fid))
 
-# Making variant that does not use the batch api. It behaves weirdly slow, inconsistently.
-def do_request():
-    pass
-
 
 def request_para_answers(para_input_file, para_output_file):
     with open(para_input_file, 'rb') as f:
@@ -731,6 +727,18 @@ def collect_sampling_of_para_qs():
     pass
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        prog='Open AI Evaluator',
+        description='Send batches of questions to OpenAI\'s API to evaluate.'
+    )
+
+    # make_request()
+    # process_batch()
+    # check_stats()
+    # request_para_answers()
+    # compare_uuid_sets()
+
     # make_request("questions_dev.pickle", 'dev')
     # Sent batch...
     # Batch id: batch_67ed6e4231988190a552d62fb967ed70
