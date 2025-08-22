@@ -15,10 +15,36 @@ A paraphrased question has the same semantic meaning and answer as the original 
 
 You may pull a copy of MMLU down from [here](https://github.com/hendrycks/test)
 
-Please install it in data/MMLU
+Extract the data.tar into the data/mmlu_data:
+
+```shell
+mkdir data/mmlu_data/ # Create if not exists
+tar -xvf data.tar -C mmlu_data/
+```
 
 # Building PAWS Dataset
 
 You may follow these instructions for building the PAWS dataset from [here](https://github.com/google-research-datasets/paws)
 
-Please install it in data/PAWS
+PAWS has 2 sub-datasets: PAWS-WIKI and PAWS QQP.
+
+## PAWS-Wiki
+
+PAWS-Wiki can be directly downloaded [here](https://storage.googleapis.com/paws/english/paws_wiki_labeled_final.tar.gz).
+
+Please install it in data/PAWS_Wiki:
+```shell
+mkdir data/PAWS_Wiki/ # Create if not exists
+cd data/PAWS_Wiki/
+wget https://storage.googleapis.com/paws/english/paws_wiki_labeled_final.tar.gz
+tar -xzvf paws_wiki_labeled_final.tar.gz
+```
+
+## PAWS-QQP
+
+This is more involved. Follow the instructions on the PAWS repository, but install the dataset in data/PAWS_QQP/
+
+```shell
+mkdir data/PAWS_QQP/ # Create if not exists
+# Copy the data into this directory after following instructions on PAWS repository.
+```

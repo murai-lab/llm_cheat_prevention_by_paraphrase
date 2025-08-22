@@ -2,7 +2,7 @@
 
 This is the repository for the Master's Thesis titled "LLM Cheat Prevention Via Adversarial Question Paraphrasing". You can find the thesis [here](https://digital.wpi.edu/show/dj52w9379).
 
-# Abstract
+# Summary
 
 Presented is a preliminary strategy to search for inoculated questions that can help instructors prevent their students from misusing LLMs to answer questions. By "inoculation", we mean questions that prompt incorrect answers when posed to an LLM, but are otherwise relevant to the instructor.
 
@@ -13,6 +13,7 @@ Presented is a preliminary strategy to search for inoculated questions that can 
 # Environment Setup
 
 Requirements:
+- Linux
 - Python
 - GPU (for Assistant Model)
 - OpenAI API key (for testing an accomplice model)
