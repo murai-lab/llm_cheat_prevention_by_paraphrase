@@ -1,4 +1,4 @@
-# Provided Data
+# Manual Evaluation Data
 
 Provided in the manual_evals are the manual evaluation results for this project. The author has manually annotated whether a question + answer pair was a correctly generated paraphrase of the original MMLU question.
 
@@ -42,7 +42,7 @@ tar -xzvf paws_wiki_labeled_final.tar.gz
 
 ## PAWS-QQP
 
-This is more involved. Follow the instructions on the PAWS repository, but install the dataset in data/PAWS_QQP/
+This is more involved due to license restrictions. Follow the instructions on the PAWS repository to generate the PAWS-QQP dataset with their provided scripts, but install the dataset in data/PAWS_QQP/
 
 ```shell
 mkdir data/PAWS_QQP/ # Create if not exists
